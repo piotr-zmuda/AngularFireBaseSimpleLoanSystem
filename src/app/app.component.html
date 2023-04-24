@@ -1,0 +1,40 @@
+<div class="container-app">
+  <div class="navbar">
+    <div class="nav-header">
+      <a class="navLink" (click)="navigate('')"> Pożyczkomat </a>
+    </div>
+    <div class="justify-content-between" style="display: flex; width: 100%;">
+      <div style="text-align: center;width: 50%">
+        <button type="button" class="btn btn-primary" routerLinkActive="active" (click)="navigate('')"><fa-icon [icon]="fontAwesomeIcons.houseIcon"></fa-icon></button>
+      </div>
+      <div style="text-align: center;width: 50%">
+        <button type="button" class="btn btn-primary" (click)="navigate('profil')"><fa-icon [icon]="fontAwesomeIcons.profileIcon"></fa-icon></button>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+  <nav class="footer d-flex align-items-center">
+    <div>
+      <a href="#">Kontakt</a>
+    </div>
+    <div>
+      <a href="#">Kariera</a>
+    </div>
+    <div>
+      <a href="#">Umowa o pożyczki</a>
+    </div>
+    <div>
+      <a href="#">O pożyczkach</a>
+    </div>
+    <div>
+      <a href="#">Dokumenty</a>
+    </div>
+
+
+  </nav>
+</div>
+
+
+

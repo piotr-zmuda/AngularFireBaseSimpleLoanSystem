@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "inzynierka-bbfa9": {
+      "hosting": {
+        "inzynierka": [
+          "inzynierka-bbfa9"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "inzynierka-bbfa9"
+  }
+}

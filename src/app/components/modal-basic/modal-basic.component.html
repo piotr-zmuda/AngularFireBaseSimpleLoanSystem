@@ -1,0 +1,22 @@
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Potwierdzenie</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+  </div>
+  <div class="modal-body">
+      Czy na pewno potwierdzasz spłate tej raty?
+  </div>
+  <div class="modal-footer justify-content-between flex" style="flex-wrap: nowrap;">
+    <div style="width: 50%; text-align: center">
+      <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Nie</button>
+    </div>
+    <div style="width: 50%;text-align: center">
+      <button type="button" class="btn btn-primary">Tak</button>
+    </div>
+  </div>
+</ng-template>
+<div style="width: 100%; text-align: center">
+  <button class="btn btn-primary" (click)="open(content)">
+    Spłać rate
+  </button>
+</div>

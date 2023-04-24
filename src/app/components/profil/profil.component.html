@@ -1,0 +1,38 @@
+<div class="header">
+  <div class="d-flex align-items-center justify-content-center" style="height: 300px;">
+
+    <h2> Jesteś zalogowany</h2>
+  </div>
+</div>
+
+<div class="content">
+  <div class="d-flex align-items-center justify-content-around buttons-container" style="height: 300px;">
+    <div>
+      <ul>
+
+        <li>Imie: {{name}}</li>
+        <li>Nazwisko: {{lastName}}</li>
+        <li> Email: {{email}}</li>
+        <li>Kontakt: {{contact}}</li>
+        <li>Password: {{password}}</li>
+      </ul>
+      <button class="btn btn-primary" (click)="navigate('pozyczka')" style="margin-right: 10px;">
+        Zmień email
+      </button><button class="btn btn-primary" (click)="navigate('pozyczka')">
+        Zmień hasło
+    </button>
+    </div>
+
+    <!--<div>
+      <h3> Pożyczka nr: -NLIjfm6VB2b6ydQSC78</h3>
+      <div *ngFor="let item of loans; index as i;">
+        Rata nr: {{i+1}} , kwota: {{item.kwota}} , spłacona: {{item.paid}}
+      </div>
+    </div>-->
+  </div>
+  <div style="width: 100%; text-align: center">
+    <button class="btn btn-primary" (click)="navigate('pozyczka')">
+      Pobierz pożyczkę
+    </button>
+  </div>
+</div>

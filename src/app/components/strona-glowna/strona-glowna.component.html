@@ -1,0 +1,31 @@
+<div class="header">
+  <div class="d-flex align-items-center justify-content-center" style="height: 300px;">
+
+    <h2> Witamy w pożyczkomacie </h2>
+  </div>
+</div>
+
+<div class="content">
+  <div class="d-flex align-items-center justify-content-center buttons-container" style="height: 200px;">
+      <div style="width: 70%">
+        <div class="input-group mb-3">
+          <input type="text #emailSignUp" [(ngModel)]="login" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1">
+          <span style="width: 5%"></span>
+          <input type="password" [(ngModel)]="password" class="form-control" placeholder="Haslo" aria-label="Haslo" aria-describedby="basic-addon1">
+        </div>
+      </div>
+  </div>
+  <div class="d-flex justify-content-center" style="width: 100%;">
+    <!--<button (click)="getUser()">
+      check
+    </button>-->
+    <div>
+      <div>
+        <button type="button" class="btn btn-primary" (click)="onSignIn()">Zaloguj się</button>
+      </div>
+      <div>
+        <a class="navLink" (click)="navigate('rejestracja')">Zarejestruj się</a>
+      </div>
+    </div>
+  </div>
+</div>

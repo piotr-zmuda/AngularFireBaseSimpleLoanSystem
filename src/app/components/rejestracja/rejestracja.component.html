@@ -1,0 +1,46 @@
+<div class="container-app">
+    <div class="header">
+      <div class="d-flex align-items-center justify-content-center" style="height: 300px;">
+
+        <h2> Rejestracja </h2>
+      </div>
+    </div>
+
+
+     <div style="width:100%; justify-content: center; text-align: center; display: flex">
+       <div style="width: 80%; margin:0">
+         <div class="input-group mb-3">
+           <input type="text" class="form-control" placeholder="Imie" aria-label="Imie" aria-describedby="basic-addon1" [(ngModel)]="form.name">
+           <span style="width: 5%"></span>
+           <input type="text" class="form-control" placeholder="Nazwisko" aria-label="Nazwisko" aria-describedby="basic-addon1" [(ngModel)]="form.lastName">
+         </div>
+
+         <div class="input-group mb-3">
+           <input type="text" class="form-control" placeholder="Email, na przykład JanKowalski@wp.pl" aria-label="Recipient's username" aria-describedby="basic-addon3" [(ngModel)]="form.email">
+           <span style="width: 5%"></span>
+           <input type="text" class="form-control" placeholder="Potwierdź email" aria-label="Nazwisko" aria-describedby="basic-addon1" [(ngModel)]="form.confEmail">
+         </div>
+         <div *ngIf="form.email !== form.confEmail"
+              style="color: red">
+           Email and confirmation email doesn't match
+         </div>
+         <div class="input-group mb-3">
+           <input type="password" class="form-control" placeholder="Hasło" aria-label="Imie" aria-describedby="basic-addon1" [(ngModel)]="form.password">
+           <span style="width: 5%"></span>
+           <input type="password" class="form-control" placeholder="Potwierdź hasło" aria-label="Nazwisko" aria-describedby="basic-addon1" [(ngModel)]="form.confPassword">
+         </div>
+         <div *ngIf="form.password !== form.confPassword"
+              style="color: red">
+           Passwords do not Match
+         </div>
+         <div class="input-group mb-3">
+           <input style="flex:0.464" type="text" class="form-control" placeholder="Kontakt" aria-label="Imie" aria-describedby="basic-addon1" [(ngModel)]="form.contact">
+         </div>
+       </div>
+     </div>
+    <div style="width: 100%; text-align: center">
+      <div>
+        <button type="button" class="btn btn-primary" (click)="writeUserData()">Zarejestruj się</button>
+      </div>
+    </div>
+</div>
